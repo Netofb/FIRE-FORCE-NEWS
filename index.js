@@ -18,8 +18,12 @@ app.set('views', path.join(__dirname,'/pages'));
 
 
 app.get('/',(req,res)=>{
-
-   res.send('funcionando')
+    
+    if(req.query.busca == null){
+        res.render('home',{});
+    }else{
+        res.send('você buscou: '+req.query.busca);
+    }
 
 });
 
