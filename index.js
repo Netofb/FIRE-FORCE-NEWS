@@ -6,6 +6,8 @@ const path = require('path');
 
 
 const app = express();
+const Posts = require('./Posts')
+
 
 mongoose.connect('mongodb+srv://root:ok8072NS8UTWMUt5@cluster0.mqepv9b.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true}).then(function(){
     console.log('Conectado com sucesso');
