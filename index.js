@@ -1,9 +1,20 @@
 const express = require('express');
+const mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 
 const path = require('path');
 
+
 const app = express();
+
+mongoose.connect('mongodb+srv://root:ok8072NS8UTWMUt5@cluster0.mqepv9b.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true}).then(function(){
+    console.log('Conectado com sucesso');
+
+}).catch(function(err){
+    console.log(err.message)
+})
+
+
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -32,6 +43,25 @@ app.get('/:slug',(req,res)=>{
     //res.send(req.params.slug);
     res.render('single',{});
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
