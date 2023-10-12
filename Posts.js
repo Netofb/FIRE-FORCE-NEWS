@@ -10,7 +10,7 @@ let postSchema = new Schema({
 },{collection:'posts'});
 
 
-let Posts = mongoose.model|("Posts",postSchema);
+let Posts = mongoose.model("Posts",postSchema);
 
 
 module.exports = Posts;
