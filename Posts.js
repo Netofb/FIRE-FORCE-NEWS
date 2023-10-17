@@ -1,16 +1,16 @@
-let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema  = mongoose.Schema;
 
-let postSchema = new Schema({
-    Titulo:String,
-    categoria:String,
-    conteudo:String,
-    slug:String,
-    imagem:String,
-},{collection:'posts'});
+var postSchema = new Schema({
+    titulo:String,
+    imagem: String,
+    categoria: String,
+    conteudo: String,
+    slug: String,
+    autor: String,
+    views: Number
+},{collection:'posts'})
 
-
-let Posts = mongoose.model("Posts",postSchema);
-
+var Posts = mongoose.model("Posts",postSchema);
 
 module.exports = Posts;
